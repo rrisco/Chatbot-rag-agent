@@ -103,15 +103,15 @@ if 'messages' not in st.session_state:
     st.session_state.messages = []
 
 # Draw a title and some markdown
-st.title("Your personal Efficiency Booster")
-st.markdown("""Generative AI is considered to bring the next Industrial Revolution.  
-Why? Studies show a **37% efficiency boost** in day to day work activities!""")
+st.title("Soporte para la eficiencia personal")
+st.markdown("""La Inteligencia Artificial Generativa se considera como el motore de la siguiente revolución industrial.  
+¡Los estudios recientes muestran alrededor de **37% de mejora** en la realización del trabajo diario!""")
 
 # Include the upload form for new data to be Vectorized
 with st.sidebar:
     with st.form('upload'):
-        uploaded_file = st.file_uploader('Upload a document for additional context', type=['pdf'])
-        submitted = st.form_submit_button('Save to Astra DB')
+        uploaded_file = st.file_uploader('Suba un archivo para tener contexto adicional', type=['pdf'])
+        submitted = st.form_submit_button('Subir a Astra DB')
         if submitted:
             vectorize_text(uploaded_file, vector_store)
 
@@ -120,7 +120,7 @@ for message in st.session_state.messages:
     st.chat_message(message['role']).markdown(message['content'])
 
 # Draw the chat input box
-if question := st.chat_input("What's up?"):
+if question := st.chat_input("¿Que hay de nuevo?"):
     
     # Store the user's question in a session object for redrawing next time
     st.session_state.messages.append({"role": "human", "content": question})
