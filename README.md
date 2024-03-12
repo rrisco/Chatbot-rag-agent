@@ -101,6 +101,7 @@ If your previous app is still running, just kill it by pressing `ctrl-c` on befo
  Necesitamos guardar la interacción para que en cada redibujado la historia se muestre correctamente.
 
 Para lograrlo hacemos los siguientes pasos:
+
 126. La pregunta se almacena dentro de `st.session_state` en `messages`
 146. Almacenamos la respuesta dentro de `st.session_state` en `messages`
 119. Cuando la app redibuja, despliega en pantalla toda la historia con un ciclo `for message in st.session_state.messages`
