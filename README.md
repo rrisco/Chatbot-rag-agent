@@ -15,7 +15,6 @@ Que queremos aprender:
 ## 1️⃣ Prerequisitos
 Se asume que ya se tiene acceso a: 
 1. [Una cuenta Github](https://github.com)
-2. [Google Colab](https://colab.research.google.com/)
 
 Adicionalmente se crearán accesos de forma gratuita a los siguientes sistemas:
 1. [DataStax Astra DB](https://astra.datastax.com) (se puede crear una cuenta a través de Github)
