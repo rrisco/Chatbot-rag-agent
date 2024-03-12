@@ -62,11 +62,11 @@ Para facilitar las cosas usaremos la fabulosa funcionalidad de Codespace. Github
 Codespaces crea tu entorno de desarrollo basado en  `Python 3.11`, automaticamente instalará las dependencias de Python a partir del archivo `requirements.txt`. Así que no es necesario hacer nada con `pip install`. También establecera automaticamente el manejo de puertos para poder entrar a apps de Streamlit posteriormente.
 Cuando el codespace arraca ejecutara una app de Streamlit, Hello World, que te mostrará algunas de las fabulosas capacidades de este framework para UI. Cuando termines de examinarla, simplemente presiona `ctrl-c` en la `terminal` para detenerla.
 
-## 3️⃣ Getting started with Streamlit to build an app
+## 3️⃣ Comenzar a construir una app con Streamlit
 
 Construiremos una aplicación con la siguiente arquitectura general:
 
-![steps](./assets/diagrama.png)
+![steps](./assets/steps.png)
 
 Usaremos Streamlit que un framework sorprendentemente fácil de usar para crear el front-end de aplicaciones web.
 
@@ -81,7 +81,7 @@ st.markdown("""La Inteligencia Artificial Generativa se considera como el motore
 ¡Los estudios recientes muestran alrededor de **37% de mejora** en la realización del trabajo diario!""")
 ```
 
-## 4️⃣ Add a Chatbot interface to the app
+## 4️⃣ Interface del chatbot
 
 El siguiente paso sería preparar nuestra app para permitir la interacción como un bot con el usuario. Usamos los siguientes componentes de Streamlit: 
 
@@ -94,7 +94,7 @@ El siguiente paso sería preparar nuestra app para permitir la interacción como
 
 If your previous app is still running, just kill it by pressing `ctrl-c` on beforehand.
 
-## 5️⃣ Remember the chatbot interaction
+## 5️⃣ Interacción con el chatbot
 
  Streamlit ejecuta el código cada vez que el usuario interactua con la app, por esa razón debemos usar caching the datos y recursos dentro de Streamlit, por ejemplo para que una conección se establezca una única vez. 
  
@@ -140,7 +140,7 @@ def load_chat_model():
 chat_model = load_chat_model()
 ```
 
-## 6️⃣ Now for the cool part! Let's integrate with the OpenAI Chat Model 🤖
+## 6️⃣ Ahora lo más cool! Integración con el modelo conversacional de OpenAI
 
 La llamada a la "cadena" o Chain se realiza de la siguiente forma:
 
@@ -160,7 +160,7 @@ Sin embargo, antes de poder continuar, necesitamos proveer la llave de OpenAI (`
 # OpenAI secrets
 OPENAI_API_KEY = "<YOUR-API-KEY>"
 ```
-## 7️⃣ Combine with the Astra DB Vector Store for additional context
+## 7️⃣ Conectar con the Astra DB Vector Store para agregar contexto
 
 Hasta este punto lo que aún hace falta revisar en la integración con la base de datos vectoria, Astra DB Vector store, para que podamos tener respuestas contextualizadas. Al integrar nuestra app con Astra DB Vector Store podemos proveer contexto en tiempo real para el modelo conversacional del LLM. Los pasos para implementar RAG (Retrieval Augmented Generation) son: 
 1. El usuario hace una pregunta
@@ -208,7 +208,7 @@ ASTRA_API_ENDPOINT = "<YOUR-API-ENDPOINT>"
 ASTRA_TOKEN = "<YOUR-TOKEN>"
 ```
 
-## 8️⃣ Finally, let's make this a streaming app
+## 8️⃣ Hacer que la aplicación tenga streaming
 
 Sería muy interesante que la respuesta vaya apareciendo en la pantalla conforme está siendo generada. Bueno eso es sencillo! 
 
@@ -242,7 +242,7 @@ El `response_placeholer` en el código de arriba define el lugar donde los token
 
 Con esto podemos ver la respuesta siendo escrita en tiempo real en la ventana del navegador.
 
-## 9️⃣ Now let's make magic happen! 🦄
+## 9️⃣ Ahora agregamos el contexto adicional
 
 La meta final es que podamos agregar el contexto de nuestra compañía al agente de chat. Para lograr esto, agregamos un control para subir archivos de tipo PDF, los cuales serán usados para regresar una respuesta significativa y con contexto!
 
@@ -300,7 +300,8 @@ En la ventana del navegador embedido veremos la UI de nuestro chatbot. Ahora deb
 
 ![end-result](./assets/end-result.png)
 
-## 1️⃣1️⃣ Let's deploy this cool stuff to Streamlit cloud!
+## 1️⃣1️⃣ Finalmente hay que desplegar nuestra app a la nube de Streamlit!
+
 El último paso es desplegar nuestra fantástica aplicacón al Internet para que otros puedan ver tu trabajo y su funcionalidad. 
 
 ### Crea tu cuenta de Streamlit 
