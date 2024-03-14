@@ -21,7 +21,7 @@ Adicionalmente se crearán accesos de forma gratuita a los siguientes sistemas:
 2. [OpenAI account](https://platform.openai.com/signup) (se puede crear una cuenta a través de Github)
 3. [Streamlit](https://streamlit.io) to deploy your amazing app (se puede crear una cuenta a través de Github)
 
-Follow the below steps and provide the **Astra DB API Endpoint**, **Astra DB ApplicationToken** and **OpenAI API Key** when required.
+Recuerda tener a mano el **Astra DB API Endpoint**, el token **Astra DB ApplicationToken** y la llave **OpenAI API Key**, se usarán más adelante donde se indique.
 
 
 ### Registro en Astra DB
@@ -88,11 +88,6 @@ El siguiente paso sería preparar nuestra app para permitir la interacción como
 123. `st.chat_input` para permitir que el usuario escriba una pregunta
 129. `st.chat_message('human')` para dibujar la entrada del usuario 
 133. `st.chat_message('assistant')` para dibujar la respuesta del chatbot
-
-
-
-
-If your previous app is still running, just kill it by pressing `ctrl-c` on beforehand.
 
 ## 5️⃣ Interacción con el chatbot
 
@@ -296,6 +291,8 @@ Para ejecutar nuestra aplicación, debemos introducir la siguiente instrucción 
 ```bash
 streamlit run app_chat.py
 ```
+
+Si hay todavía está ejecutandose alguna aplicación, sólo hay que detenerla con `ctrl-c` antes de ejecutar nuestra nueva app.
 
 En la ventana del navegador embedido veremos la UI de nuestro chatbot. Ahora debemos cargar un documento PDF, o varios, cuantos más mejor; los cuales sean relevantes, para comenzar a hacer preguntas acerca del tema. ¡Verás que las respuestas serán más relevantes, asi como con mayor sentido y contexto!
 
